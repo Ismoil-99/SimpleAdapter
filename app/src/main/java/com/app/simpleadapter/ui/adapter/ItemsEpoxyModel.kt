@@ -1,5 +1,6 @@
-package com.app.simpleadapter
+package com.app.simpleadapter.ui.adapter
 
+import com.app.simpleadapter.R
 import com.app.simpleadapter.data.Items
 import com.app.simpleadapter.databinding.ListPriemerBinding
 import com.app.simpleadapter.epoxy.ViewBindingKotlinModel

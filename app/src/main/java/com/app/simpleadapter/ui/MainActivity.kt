@@ -1,8 +1,10 @@
-package com.app.simpleadapter
+package com.app.simpleadapter.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.app.simpleadapter.ui.adapter.EpoxyItemsController
+import com.app.simpleadapter.R
 import com.app.simpleadapter.data.Items
 import com.app.simpleadapter.data.ItemsHeader
 import com.app.simpleadapter.databinding.ActivityMainBinding
@@ -37,15 +39,15 @@ class MainActivity : AppCompatActivity() {
             Items(6, "Ozil", R.drawable.ozil_icons),
         )
         val headers = listOf(
-            ItemsHeader(0,"Clubs",R.drawable.football_club),
-            ItemsHeader(1,"Players",R.drawable.football_player)
+            ItemsHeader(0,"Clubs", R.drawable.football_club),
+            ItemsHeader(1,"Players", R.drawable.football_player)
         )
         setupAdapter(clubs,headers,player)
     }
 
     private fun setupAdapter(clubs: List<Items>,headers: List<ItemsHeader>,player: List<Items>) {
-        val epoxyController = EpoxyItemsController{
-            Log.d("value", it.name)
+        val epoxyController = EpoxyItemsController { item ->
+            Log.d("value", "$item")
         }
         binding.epoxyModel.setController(epoxyController)
         epoxyController.apply {

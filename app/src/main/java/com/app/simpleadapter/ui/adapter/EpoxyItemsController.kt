@@ -1,4 +1,4 @@
-package com.app.simpleadapter
+package com.app.simpleadapter.ui.adapter
 
 import com.airbnb.epoxy.CarouselModel_
 import com.airbnb.epoxy.EpoxyController
